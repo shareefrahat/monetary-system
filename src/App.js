@@ -1,9 +1,10 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="my-10 text-2xl">Monetary System</h1>
+      <Navbar></Navbar>
     </div>
   );
 }
