@@ -46,7 +46,7 @@ const Navbar = () => {
               <HiSearch />
             </div>
           </div>
-          <div className="flex flex-row lg:flex-col gap-4">
+          <div className="flex flex-row lg:flex-col gap-8">
             {links.map((link) => (
               <div key={link.id}>
                 <ActiveRoute to={link.path}>{link.icon}</ActiveRoute>

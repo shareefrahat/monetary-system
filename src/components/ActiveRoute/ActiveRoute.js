@@ -10,7 +10,7 @@ const ActiveRoute = ({ children, to, ...props }) => {
         className={
           match
             ? "text-2xl lg:text-3xl bg-primary text-slate-100 w-fit mx-auto p-3 rounded-xl block shadow-xl"
-            : "text-2xl lg:text-3xl bg-white text-neutral t w-fit mx-auto p-3 rounded-xl block shadow-none hover:text-primary"
+            : "text-2xl lg:text-3xl bg-white text-neutral w-fit mx-auto p-3 rounded-xl block shadow-none hover:text-primary"
         }
         to={to}
         {...props}
