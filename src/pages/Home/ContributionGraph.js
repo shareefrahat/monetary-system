@@ -73,15 +73,16 @@ const ContributionGraph = () => {
     },
   ];
   return (
-    <div className="w-full overflow-auto">
+    <div className="w-fit overflow-auto">
       <BarChart
+        className="mr-auto w-fit"
         width={500}
         height={300}
         data={data}
         margin={{
           top: 20,
           right: 0,
-          left: -20,
+          left: 20,
           bottom: 5,
         }}
       >
