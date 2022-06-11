@@ -62,7 +62,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="lg:px-16 px-6 py-10 ">
+        <section className="lg:px-0 px-6 py-10">
           <GraphSection></GraphSection>
         </section>
         <section className="lg:px-16 px-6 py-10 mb-20 lg:mb-0">
