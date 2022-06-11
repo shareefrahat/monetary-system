@@ -1,5 +1,6 @@
 import React from "react";
 import avatar from "../../images/user-7.jpg";
+import GraphSection from "./GraphSection";
 
 const Home = () => {
   return (
@@ -16,23 +17,20 @@ const Home = () => {
           </div>
           <div className="my-8 pl-4">
             <p className="text-lg mb-4">Today</p>
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-              $19,892
-              <br />
+            <div className="mb-4">
+              <h2 className="text-2xl lg:text-3xl font-bold">$19,892</h2>
               <small className="text-sm text-neutral">Account Balance</small>
-            </h2>
-            <h3 className="text-lg lg:text-xl font-bold mb-3">
-              $19,892
-              <br />
+            </div>
+            <div className="mb-4">
+              <h3 className="text-lg lg:text-xl font-bold">$4,000</h3>
               <small className="text-sm text-neutral">
                 Year-to-date-contribution
               </small>
-            </h3>
-            <h3 className="text-lg lg:text-xl font-bold mb-3">
-              $19,892
-              <br />
+            </div>
+            <div className="mb-4">
+              <h3 className="text-lg lg:text-xl font-bold">$1,892</h3>
               <small className="text-sm text-neutral">Total Interest</small>
-            </h3>
+            </div>
             <button className="btnbtn px-6 py-2 bg-primary text-slate-100 rounded-md">
               <select
                 className=" bg-primary text-slate-100 rounded-md"
@@ -45,11 +43,25 @@ const Home = () => {
               </select>
             </button>
           </div>
-          <div className="my-8 pl-4">
-            <p className="text-lg mb-4">Today</p>
+          <div className="mt-12 pl-4">
+            <p className="text-lg mb-6">Recent Transactions</p>
+            <div className="text-sm pb-4 border-b border-b-slate-200 mb-4">
+              <small className="text-sm text-neutral">2020-08-07</small>
+              <h6>Withdrawal Transfer to Bank-XXX11</h6>
+            </div>
+            <div className="text-sm pb-4 border-b border-b-slate-200 mb-4">
+              <small className="text-sm text-neutral">2020-07-21</small>
+              <h6>Withdrawal Transfer to Bank-XXX11</h6>
+            </div>
+            <div className="text-sm pb-4 border-b border-b-slate-200 mb-4">
+              <small className="text-sm text-neutral">2020-07-16</small>
+              <h6>Withdrawal Transfer to Bank-XXX11</h6>
+            </div>
           </div>
         </section>
-        <section>Section-2</section>
+        <section>
+          <GraphSection></GraphSection>
+        </section>
         <section>Section-3</section>
       </div>
     </>
