@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 
 const ContributionGraph = () => {
   const data = [
@@ -73,9 +65,9 @@ const ContributionGraph = () => {
     },
   ];
   return (
-    <div className="w-fit overflow-auto">
+    <div className="overflow-auto">
       <BarChart
-        className="mr-auto w-fit"
+        className="mr-auto w-fit z-30"
         width={500}
         height={300}
         data={data}
@@ -90,7 +82,6 @@ const ContributionGraph = () => {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Legend />
         <Bar dataKey="employer" stackId="a" fill="#4935ff" />
         <Bar dataKey="employee" stackId="a" fill="#4935ffde" />
         <Bar dataKey="interest" stackId="a" fill="#6ab0eee9" />

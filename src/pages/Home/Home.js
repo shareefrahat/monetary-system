@@ -2,13 +2,23 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import avatar from "../../images/user-7.jpg";
 import GraphSection from "./GraphSection";
+import { FaRegBell } from "@react-icons/all-files/fa/FaRegBell";
+import { HiOutlineLogout } from "@react-icons/all-files/hi/HiOutlineLogout";
 
 const Home = () => {
   const [percent, setPercent] = useState(100);
   const [age, setAge] = useState(100);
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-between gap-10">
+      <div className="flex flex-row justify-between lg:hidden px-1 sticky top-0 bg-white">
+        <div className="text-2xl bg-white text-neutral p-3 rounded-xl hover:text-primary">
+          <HiOutlineLogout />
+        </div>
+        <div className="text-2xl bg-white text-neutral p-3 rounded-xl hover:text-primary">
+          <FaRegBell />
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row justify-between gap-10 bg-white">
         <section className="bg-gray-50/80 lg:pl-32 lg:pr-20 px-6 py-10 h-screen">
           <div className="flex flex-row justify-start text-left gap-4 items-center">
             <img className="w-20 rounded-full" src={avatar} alt="" />
@@ -20,21 +30,25 @@ const Home = () => {
           </div>
           <div className="my-8 pl-4">
             <p className="text-lg mb-4">Today</p>
-            <div className="mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold">$19,892</h2>
-              <small className="text-sm text-neutral">Account Balance</small>
+            <div>
+              <div className="mb-4">
+                <h2 className="text-4xl font-bold">$19,892</h2>
+                <small className="text-sm text-neutral">Account Balance</small>
+              </div>
+              <div className="flex flex-row lg:flex-col gap-x-8">
+                <div className="mb-4">
+                  <h3 className="text-lg lg:text-xl font-bold">$4,000</h3>
+                  <small className="text-sm text-neutral">
+                    Year-to-date-contribution
+                  </small>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-lg lg:text-xl font-bold">$1,892</h3>
+                  <small className="text-sm text-neutral">Total Interest</small>
+                </div>
+              </div>
             </div>
-            <div className="mb-4">
-              <h3 className="text-lg lg:text-xl font-bold">$4,000</h3>
-              <small className="text-sm text-neutral">
-                Year-to-date-contribution
-              </small>
-            </div>
-            <div className="mb-4">
-              <h3 className="text-lg lg:text-xl font-bold">$1,892</h3>
-              <small className="text-sm text-neutral">Total Interest</small>
-            </div>
-            <button className="btn px-6 py-3 bg-primary text-slate-100 rounded-xl">
+            <button className="btn px-6 py-3 bg-primary text-slate-100 rounded-xl inline-block w-full lg:w-fit">
               <select
                 className=" bg-primary text-slate-100 rounded-xl outline-none"
                 name="action"
@@ -62,10 +76,10 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="lg:px-0 px-6 py-10">
+        <section className="lg:px-0 px-6 lg:py-10">
           <GraphSection></GraphSection>
         </section>
-        <section className="lg:px-16 px-6 py-10 mb-20 lg:mb-0">
+        <section className="lg:px-16 px-6 lg:py-10 mb-40 lg:mb-0">
           <div>
             <div className="bg-gray-50/80 p-6 rounded-md mb-10">
               <div className="border-b border-b-slate-200 mb-4">

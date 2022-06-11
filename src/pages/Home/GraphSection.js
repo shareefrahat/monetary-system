@@ -15,28 +15,51 @@ const GraphSection = () => {
             <h2 className="text-xl lg:text-2xl font-bold">$300,000</h2>
             <small className="text-sm text-neutral">My Goal</small>
           </div>
-          <div className="mb-4 border-b-2 border-b-primary pb-4">
-            <h2 className="text-xl lg:text-2xl font-bold">59%</h2>
-            <small className="text-sm text-neutral">Goal Achieved</small>
-          </div>
-          <div className="mb-4 border-b-2 border-b-primary pb-4">
-            <h2 className="text-xl lg:text-2xl font-bold">$300</h2>
-            <small className="text-sm text-neutral">Est. Monthly Income</small>
+          <div className="flex flex-row justify-between lg:gap-20">
+            <div className="mb-4 border-b-2 border-b-primary pb-4">
+              <h2 className="text-xl lg:text-2xl font-bold">59%</h2>
+              <small className="text-sm text-neutral">Goal Achieved</small>
+            </div>
+            <div className="mb-4 border-b-2 border-b-primary pb-4">
+              <h2 className="text-xl lg:text-2xl font-bold">$300</h2>
+              <small className="text-sm text-neutral">
+                Est. Monthly Income
+              </small>
+            </div>
           </div>
         </div>
         <div className="my-10">
-          <p className="text-lg lg:text-xl">Contribution Overtime</p>
+          <p className="text-lg lg:text-xl font-bold">Contribution Overtime</p>
+          <div className="flex flex-row justify-between items-center my-5">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
+              <span className="inline-block w-3 h-2 rounded-md bg-primary"></span>
+              <small className="text-neutral block">Employer:</small>
+              <small className="block font-bold">73,500K</small>
+            </div>
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
+              <span className="inline-block w-3 h-2 rounded-md bg-[#4935ffde]"></span>
+              <small className="text-neutral block">Employee:</small>
+              <small className="block font-bold">52,500K</small>
+            </div>
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
+              <span className="inline-block w-3 h-2 rounded-md bg-[#6ab0eee9]"></span>
+              <small className="text-neutral block">Total Interest:</small>
+              <small className="block font-bold">244,313K</small>
+            </div>
+          </div>
           <div>
             <ContributionGraph></ContributionGraph>
           </div>
         </div>
         <div className="mb-40 lg:mb-0 mt-16">
-          <p className="text-lg lg:text-xl">How do I compare to my peers?</p>
+          <p className="text-lg lg:text-xl font-bold">
+            How do I compare to my peers?
+          </p>
           <small className="text-neutral block">
             These numbers represents current goal achievement
           </small>
           <div className="flex flex-col lg:flex-row justify-start items-center gap-10 lg:gap-20 mt-8">
-            <div>
+            <div className="w-full">
               <div className="text-md pb-4 border-b border-b-slate-200 mb-4">
                 <h6>
                   Age: Under{" "}

@@ -38,7 +38,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className="bg-white mr-0 fixed bottom-0 lg:left-0 w-full lg:w-fit lg:inset-y-0 flex flex-row lg:flex-col justify-center items-center lg:justify-between p-3">
+      <nav className="bg-white mr-0 fixed bottom-0 lg:left-0 w-full lg:w-fit lg:inset-y-0 flex flex-row lg:flex-col justify-center items-center lg:justify-between p-3 z-50">
         <div className="flex flex-row-reverse lg:flex-col items-center gap-4 lg:gap-y-10">
           <div>
             <img className="hidden lg:block w-16 mx-auto" src={logo} alt="" />
@@ -55,10 +55,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden lg:block">
-          <div className="text-2xl lg:text-3xl bg-white text-neutral t w-fit mx-auto p-3 rounded-xl hover:text-primary">
+          <div className="text-2xl lg:text-3xl bg-white text-neutral w-fit mx-auto p-3 rounded-xl hover:text-primary">
             <FaRegBell />
           </div>
-          <div className="text-2xl lg:text-3xl bg-white text-neutral t w-fit mx-auto p-3 rounded-xl hover:text-primary">
+          <div className="text-2xl lg:text-3xl bg-white text-neutral w-fit mx-auto p-3 rounded-xl hover:text-primary mt-4">
             <HiOutlineLogout />
           </div>
         </div>
