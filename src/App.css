@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
 
 .App {
-  /* text-align: center; */
   font-family: "Roboto Slab", serif;
 }
 
@@ -21,7 +20,8 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4935ff;
+  background: #fff;
+  box-shadow: 1px 1px 5px #9aa3aa;
   cursor: pointer;
 }
 
@@ -29,6 +29,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4935ff;
+  background: #fff;
+  box-shadow: 1px 1px 5px #9aa3aa;
   cursor: pointer;
 }

@@ -8,9 +8,10 @@ import { HiOutlineLogout } from "@react-icons/all-files/hi/HiOutlineLogout";
 const Home = () => {
   const [percent, setPercent] = useState(100);
   const [age, setAge] = useState(100);
+
   return (
     <>
-      <div className="flex flex-row justify-between lg:hidden px-1 sticky top-0 bg-white">
+      <div className="flex flex-row justify-between lg:hidden px-1 sticky top-0 bg-white z-40">
         <div className="text-2xl bg-white text-neutral p-3 rounded-xl hover:text-primary">
           <HiOutlineLogout />
         </div>
@@ -85,7 +86,7 @@ const Home = () => {
               <div className="border-b border-b-slate-200 mb-4">
                 <p className="text-lg mb-6 font-bold">Retirement Strategy</p>
                 <div className="mb-6">
-                  <label for="range-1" className="block mb-2 text-sm">
+                  <label htmlFor="range-1" className="block mb-2 text-sm">
                     Employee Contribution
                   </label>
                   <p className="flex flex-row items-center gap-5">
@@ -101,7 +102,7 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="mb-6">
-                  <label for="range-1" className="block mb-2 text-sm">
+                  <label htmlFor="range-1" className="block mb-2 text-sm">
                     Retirement Age
                   </label>
                   <p className="flex flex-row items-center gap-5">
