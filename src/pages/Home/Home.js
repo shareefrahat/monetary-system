@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import avatar from "../../images/user-7.jpg";
 import GraphSection from "./GraphSection";
 
 const Home = () => {
+  const [percent, setPercent] = useState(100);
+  const [age, setAge] = useState(100);
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-between lg:ml-28 lg:pl-10 p-6">
-        <section>
+      <div className="flex flex-col lg:flex-row gap-10">
+        <section className="bg-gray-50/80 lg:pl-32 lg:pr-20 px-6 py-10 h-screen w-full lg:w-1/4">
           <div className="flex flex-row justify-start text-left gap-4 items-center">
             <img className="w-20 rounded-full" src={avatar} alt="" />
             <p className="text-xl lg:text-2xl font-bold">
@@ -59,10 +61,52 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section className="lg:px-20 px-6 py-10 w-full lg:w-2/4">
           <GraphSection></GraphSection>
         </section>
-        <section>Section-3</section>
+        <section className="lg:px-20 px-6 py-10 mb-20 lg:mb-0 w-full lg:w-1/4">
+          <div>
+            <div className="bg-gray-50/80 p-6 rounded-md">
+              <div className="border-b border-b-slate-200 mb-4">
+                <p className="text-lg mb-6 font-bold">Retirement Strategy</p>
+                <div className="mb-6">
+                  <label for="range-1" className="block mb-2 text-sm">
+                    Employee Contribution
+                  </label>
+                  <p className="flex flex-row items-center gap-5">
+                    <input
+                      className="slider w-full"
+                      type="range"
+                      min="1"
+                      max="100"
+                      value={percent}
+                      onChange={(e) => setPercent(e.target.value)}
+                    />
+                    <span>{percent}%</span>
+                  </p>
+                </div>
+                <div className="mb-6">
+                  <label for="range-1" className="block mb-2 text-sm">
+                    Retirement Age
+                  </label>
+                  <p className="flex flex-row items-center gap-5">
+                    <input
+                      className="slider w-full"
+                      type="range"
+                      min="1"
+                      max="100"
+                      value={age}
+                      onChange={(e) => setAge(e.target.value)}
+                    />
+                    <span>{age}</span>
+                  </p>
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div></div>
+          </div>
+        </section>
       </div>
     </>
   );
